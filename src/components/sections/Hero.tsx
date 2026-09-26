@@ -82,7 +82,7 @@ export const Hero: React.FC = () => {
 
             {/* Download Resume Button */}
             <a
-              href="/Nadella_Naveen.pdf"
+              href={`${import.meta.env.BASE_URL}Nadella_Naveen.pdf`}
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 rounded-sm bg-[#121214] hover:bg-[#1C1C20] border border-white/20 hover:border-white text-white font-serif text-sm tracking-widest uppercase font-medium transition-all duration-300 flex items-center justify-center gap-2 group shadow-md"
@@ -169,7 +169,7 @@ export const Hero: React.FC = () => {
             {/* Naveen's Studio Portrait Cutout */}
             <div className="relative z-10 w-full h-full flex items-end justify-center overflow-hidden pb-4">
               <img
-                src="/images/naveen-cutout.png"
+                src={`${import.meta.env.BASE_URL}images/naveen-cutout.png`}
                 alt="Nadella Venkata Sai Naveen"
                 className="w-auto h-[440px] sm:h-[490px] max-w-full object-contain filter drop-shadow-[0_10px_35px_rgba(255,255,255,0.12)] transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                 loading="eager"

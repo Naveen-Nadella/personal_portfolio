@@ -131,7 +131,7 @@ export const Navbar: React.FC = () => {
 
             {/* Quick Resume Link in Pure Monochrome High Contrast */}
             <a
-              href="/Nadella_Naveen.pdf"
+              href={`${import.meta.env.BASE_URL}Nadella_Naveen.pdf`}
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center gap-2 px-4 py-1.5 rounded-sm bg-white hover:bg-[#E4E4E7] text-black text-xs font-serif tracking-widest font-bold transition-all duration-300 shadow-md shadow-black/80 hover:shadow-white/20"
@@ -182,7 +182,7 @@ export const Navbar: React.FC = () => {
 
           <div className="pt-6 border-t border-white/10 flex flex-col gap-3">
             <a
-              href="/Nadella_Naveen.pdf"
+              href={`${import.meta.env.BASE_URL}Nadella_Naveen.pdf`}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full flex items-center justify-center gap-2 py-3 bg-white text-black font-serif text-sm tracking-wider font-bold rounded-sm"

@@ -106,7 +106,7 @@ export const About: React.FC = () => {
             <div className="mb-6 relative group overflow-hidden rounded-sm border border-white/20">
               <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#121214]">
                 <img
-                  src="/images/naveen-headshot.jpg"
+                  src={`${import.meta.env.BASE_URL}images/naveen-headshot.jpg`}
                   alt="Nadella Venkata Sai Naveen"
                   className="w-full h-full object-cover object-top filter grayscale contrast-110 brightness-95 transition-all duration-500 group-hover:scale-105 group-hover:filter-none"
                   loading="lazy"
