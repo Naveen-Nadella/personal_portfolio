@@ -5,8 +5,8 @@ import { skillsData } from '../../data/skills';
 import { soundEngine } from '../../utils/audio';
 import { Sparkles, Code2, Database, Cloud, ShieldAlert, Cpu } from 'lucide-react';
 
-export const Skills: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('ALL');
+export const Skills = () => {
+  const [selectedCategory, setSelectedCategory] = useState('ALL');
 
   const categories = [
     { id: 'ALL', label: 'COMPLETE ARSENAL', code: 'ALL', icon: Sparkles },
@@ -17,7 +17,7 @@ export const Skills: React.FC = () => {
     { id: 'SECURITY', label: 'CYBERSECURITY & AI', code: '05', icon: ShieldAlert }
   ];
 
-  const handleCategoryChange = (id: string) => {
+  const handleCategoryChange = (id) => {
     soundEngine.playBrushSwipe();
     setSelectedCategory(id);
   };

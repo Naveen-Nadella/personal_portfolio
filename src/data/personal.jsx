@@ -1,6 +1,4 @@
-import type { PersonalInfo } from '../types/portfolio';
-
-export const personalData: PersonalInfo = {
+export const personalData = {
   name: "Nadella Venkata Sai Naveen",
   monogram: "NN",
   title: "Full Stack Developer & Cybersecurity Enthusiast",

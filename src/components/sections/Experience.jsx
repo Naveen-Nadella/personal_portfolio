@@ -4,7 +4,7 @@ import { KanjiWatermark } from '../common/KanjiWatermark';
 import { experienceData } from '../../data/experience';
 import { Briefcase, GraduationCap, Calendar, CheckCircle } from 'lucide-react';
 
-export const Experience: React.FC = () => {
+export const Experience = () => {
   return (
     <section id="journey" className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#000000]">
       <KanjiWatermark char="04" position="top-left" opacity={0.02} />

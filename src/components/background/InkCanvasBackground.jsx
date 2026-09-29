@@ -1,33 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
-interface Particle {
-  x: number;
-  y: number;
-  vx: number;
-  vy: number;
-  size: number;
-  alpha: number;
-  maxAlpha: number;
-  color: string;
-}
-
-interface Leaf {
-  x: number;
-  y: number;
-  vx: number;
-  vy: number;
-  size: number;
-  rotation: number;
-  rotationSpeed: number;
-  swaySpeed: number;
-  swayOffset: number;
-  swayAmplitude: number;
-  color: string;
-  alpha: number;
-}
-
-export const InkCanvasBackground: React.FC = () => {
-  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+export const InkCanvasBackground = () => {
+  const canvasRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -38,7 +12,7 @@ export const InkCanvasBackground: React.FC = () => {
     // Check prefers-reduced-motion
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    let animationFrameId: number;
+    let animationFrameId;
     let width = (canvas.width = window.innerWidth);
     let height = (canvas.height = window.innerHeight);
 
@@ -52,7 +26,7 @@ export const InkCanvasBackground: React.FC = () => {
 
     // Monochrome Ink & Ash Particles
     const particleCount = Math.min(32, Math.floor(width / 40));
-    const particles: Particle[] = [];
+    const particles = [];
     const colors = ['#FFFFFF', '#E4E4E7', '#A1A1AA', '#52525B'];
 
     for (let i = 0; i < particleCount; i++) {
@@ -70,7 +44,7 @@ export const InkCanvasBackground: React.FC = () => {
 
     // Monochrome drifting leaf silhouettes
     const leafCount = Math.min(12, Math.max(5, Math.floor(width / 140)));
-    const leaves: Leaf[] = [];
+    const leaves = [];
     const monochromeLeafColors = ['#E4E4E7', '#A1A1AA', '#71717A', '#3F3F46', '#27272A'];
 
     for (let i = 0; i < leafCount; i++) {
@@ -92,13 +66,13 @@ export const InkCanvasBackground: React.FC = () => {
 
     // Draw stylized leaf path
     const drawMonochromeLeaf = (
-      context: CanvasRenderingContext2D,
-      x: number,
-      y: number,
-      size: number,
-      rot: number,
-      color: string,
-      alpha: number
+      context,
+      x,
+      y,
+      size,
+      rot,
+      color,
+      alpha
     ) => {
       context.save();
       context.translate(x, y);

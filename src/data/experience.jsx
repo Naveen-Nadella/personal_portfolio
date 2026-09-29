@@ -1,6 +1,4 @@
-import type { ExperienceItem } from '../types/portfolio';
-
-export const experienceData: ExperienceItem[] = [
+export const experienceData = [
   {
     id: "meshasec-internship",
     year: "2026",

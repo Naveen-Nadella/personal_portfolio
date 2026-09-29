@@ -4,7 +4,7 @@ import { KanjiWatermark } from '../common/KanjiWatermark';
 import { personalData } from '../../data/personal';
 import { Server, Shield, Brain, GitBranch, GraduationCap, Compass } from 'lucide-react';
 
-export const About: React.FC = () => {
+export const About = () => {
   const pillars = [
     {
       icon: Server,

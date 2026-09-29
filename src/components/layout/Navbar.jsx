@@ -3,13 +3,7 @@ import { RedSeal } from '../common/RedSeal';
 import { soundEngine } from '../../utils/audio';
 import { Volume2, VolumeX, Menu, X, FileText } from 'lucide-react';
 
-interface NavItem {
-  id: string;
-  label: string;
-  code: string;
-}
-
-const navItems: NavItem[] = [
+const navItems = [
   { id: 'hero', label: 'HOME', code: '01' },
   { id: 'about', label: 'ABOUT', code: '02' },
   { id: 'skills', label: 'SKILLS', code: '03' },
@@ -19,7 +13,7 @@ const navItems: NavItem[] = [
   { id: 'contact', label: 'CONTACT', code: '07' }
 ];
 
-export const Navbar: React.FC = () => {
+export const Navbar = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -49,7 +43,7 @@ export const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (id: string) => {
+  const handleNavClick = (id) => {
     setMobileMenuOpen(false);
     soundEngine.playBrushSwipe();
     const element = document.getElementById(id);

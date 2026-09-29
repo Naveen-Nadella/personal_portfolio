@@ -1,6 +1,4 @@
-import type { Project } from '../types/portfolio';
-
-export const projectsData: Project[] = [
+export const projectsData = [
   {
     id: "mykhata",
     title: "MyKhata",

@@ -1,14 +1,6 @@
 import React from 'react';
 
-interface RedSealProps {
-  char?: string;
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  className?: string;
-  subtext?: string;
-  rotate?: boolean;
-}
-
-export const RedSeal: React.FC<RedSealProps> = ({
+export const RedSeal = ({
   char = 'NN',
   size = 'md',
   className = '',

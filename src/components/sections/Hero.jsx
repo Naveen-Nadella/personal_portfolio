@@ -5,8 +5,8 @@ import { soundEngine } from '../../utils/audio';
 import { GithubIcon, LinkedinIcon } from '../common/SocialIcons';
 import { Mail, Phone, ArrowDown, Download, ShieldCheck, Award, ArrowUpRight } from 'lucide-react';
 
-export const Hero: React.FC = () => {
-  const handleScrollTo = (id: string) => {
+export const Hero = () => {
+  const handleScrollTo = (id) => {
     soundEngine.playBrushSwipe();
     const el = document.getElementById(id);
     if (el) {
